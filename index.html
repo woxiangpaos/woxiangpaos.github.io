@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变态SF,超变态SF,新开超级变态传奇-凤鸣手游网</title>
+    <meta name="keywords" content="变态SF,超变态SF,新开超级变态传奇,凤鸣手游网,超级变态SF,新开变态传奇,超变传奇手游,单职业超变传奇,散人打金传奇,新开超变传奇,超变65535,光柱传奇,满V传奇">
+    <meta name="description" content="凤鸣手游网是专业的变态SF、超变态SF发布平台，每日更新新开超级变态传奇开服表，提供超变传奇手游攻略、装备回收价格、散人打金指南，安卓苹果双端互通，满屏光柱高爆率，公平公正散人天堂。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            background: #1a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* 顶部导航 */
+        .top-bar {
+            background: linear-gradient(135deg, #8b0000 0%, #4a0000 100%);
+            border-bottom: 2px solid #d4af37;
+            padding: 10px 0;
+        }
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d4af37;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo::before {
+            content: "🦅";
+            font-size: 32px;
+        }
+        .datetime {
+            color: #f0e68c;
+            font-size: 14px;
+        }
+        .nav-bar {
+            background: #2d0a0a;
+            border-bottom: 1px solid #8b0000;
+        }
+        .nav-list {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-list li a {
+            display: block;
+            padding: 12px 20px;
+            color: #e0e0e0;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .nav-list li a:hover {
+            background: #8b0000;
+            color: #d4af37;
+        }
+        /* 滚动公告 */
+        .notice-bar {
+            background: linear-gradient(90deg, #4a0000, #8b0000, #4a0000);
+            padding: 10px 0;
+            overflow: hidden;
+            border-bottom: 1px solid #d4af37;
+        }
+        .notice-content {
+            white-space: nowrap;
+            animation: scrollNotice 20s linear infinite;
+            color: #ffd700;
+            font-weight: 500;
+        }
+        @keyframes scrollNotice {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* 首屏焦点区 */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .hero-banner {
+            border: 2px solid #d4af37;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .hero-banner img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-banner-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 30px 20px 20px;
+            color: #fff;
+        }
+        .hero-banner-text h2 {
+            font-size: 28px;
+            color: #d4af37;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero-side {
+            background: #2d0a0a;
+            border: 2px solid #8b0000;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        .hero-side h3 {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #8b0000;
+            padding-bottom: 8px;
+            text-align: center;
+        }
+        .quick-server-list {
+            list-style: none;
+        }
+        .quick-server-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #8b0000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .quick-server-list li:last-child {
+            border-bottom: none;
+        }
+        .server-tag {
+            background: #8b0000;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .server-enter-btn {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .server-enter-btn:hover {
+            background: linear-gradient(135deg, #ffd700, #d4af37);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        /* 卖点区 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #2d0a0a, #4a0000);
+            border: 1px solid #d4af37;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .feature-card h4 {
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        /* 主体内容区 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .content-card {
+            background: #2d0a0a;
+            border: 2px solid #8b0000;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .card-header {
+            background: linear-gradient(90deg, #8b0000, #4a0000);
+            padding: 12px 20px;
+            border-bottom: 2px solid #d4af37;
+        }
+        .card-header h3 {
+            color: #d4af37;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* 标签切换 */
+        .tab-nav {
+            display: flex;
+            background: #4a0000;
+            border-bottom: 1px solid #d4af37;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            background: #8b0000;
+            color: #d4af37;
+            border-bottom: 3px solid #d4af37;
+        }
+        .tab-content {
+            padding: 20px;
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .news-headline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .headline-item {
+            border: 1px solid #8b0000;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .headline-item:hover {
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        .headline-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .headline-text {
+            padding: 12px;
+        }
+        .headline-text h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .headline-text h4:hover {
+            color: #d4af37;
+        }
+        .headline-text .date {
+            color: #999;
+            font-size: 12px;
+        }
+        .news-list {
+            list-style: none;
+        }
+        .news-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #4a0000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .news-list li:last-child {
+            border-bottom: none;
+        }
+        .news-list li a {
+            color: #ccc;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        .news-list li a:hover {
+            color: #d4af37;
+        }
+        .news-list li .news-date {
+            color: #999;
+            font-size: 12px;
+        }
+        /* 开服列表 */
+        .server-list {
+            padding: 0;
+        }
+        .server-item {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+            padding: 15px 20px;
+            border-bottom: 1px solid #4a0000;
+            align-items: center;
+            gap: 10px;
+        }
+        .server-item:hover {
+            background: #4a0000;
+        }
+        .server-item.header {
+            background: #4a0000;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        .server-name {
+            font-weight: 500;
+            color: #fff;
+        }
+        .server-name:hover {
+            color: #d4af37;
+        }
+        .server-type {
+            color: #ff6b6b;
+            font-size: 14px;
+        }
+        .server-time {
+            color: #ffd700;
+            font-size: 14px;
+        }
+        .star {
+            color: #ffd700;
+        }
+        /* 侧边栏 */
+        .sidebar-promo {
+            border: 2px solid #d4af37;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .sidebar-promo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .promo-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff0000;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .rank-list {
+            list-style: none;
+            padding: 15px;
+        }
+        .rank-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #4a0000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            background: #4a0000;
+            color: #ccc;
+        }
+        .rank-num.top1 {
+            background: #ffd700;
+            color: #000;
+        }
+        .rank-num.top2 {
+            background: #c0c0c0;
+            color: #000;
+        }
+        .rank-num.top3 {
+            background: #cd7f32;
+            color: #fff;
+        }
+        .rank-name {
+            flex: 1;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        .rank-name:hover {
+            color: #d4af37;
+        }
+        .rank-heat {
+            color: #ff6b6b;
+            font-size: 12px;
+        }
+        /* 开服日历 */
+        .calendar-container {
+            padding: 15px;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 3px;
+            text-align: center;
+        }
+        .calendar-day {
+            padding: 6px 0;
+            font-size: 12px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .calendar-day.weekend {
+            color: #ff6b6b;
+        }
+        .calendar-day.today {
+            background: #d4af37;
+            color: #000;
+            font-weight: bold;
+        }
+        .calendar-day.has-server {
+            background: #8b0000;
+            color: #fff;
+            position: relative;
+        }
+        .calendar-day.has-server::after {
+            content: "开";
+            position: absolute;
+            top: 0;
+            right: 2px;
+            font-size: 8px;
+            color: #ffd700;
+        }
+        /* FAQ */
+        .faq-list {
+            padding: 10px 15px;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            background: #4a0000;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #ffd700;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: "+";
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 10px;
+            color: #ccc;
+            font-size: 14px;
+            display: none;
+            border-left: 3px solid #d4af37;
+            margin-top: 5px;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        /* 版本推荐 */
+        .version-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .version-card {
+            background: linear-gradient(135deg, #2d0a0a, #4a0000);
+            border: 2px solid #8b0000;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .version-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        .version-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .version-info {
+            padding: 20px;
+        }
+        .version-info h4 {
+            color: #d4af37;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .version-features {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        .version-features li {
+            padding: 5px 0;
+            color: #ccc;
+            font-size: 14px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .version-features li::before {
+            content: "✔";
+            color: #ffd700;
+            position: absolute;
+            left: 0;
+        }
+        .version-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .version-btn:hover {
+            background: linear-gradient(135deg, #ffd700, #d4af37);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+        }
+        /* 回收价格表 */
+        .recycle-table {
+            width: 100%;
+            border-collapse: collapse;
+            padding: 0 20px 20px;
+        }
+        .recycle-table th, .recycle-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #4a0000;
+        }
+        .recycle-table th {
+            background: #4a0000;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .recycle-table tr:hover {
+            background: #4a0000;
+        }
+        .price {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        /* 下载区 */
+        .download-section {
+            background: linear-gradient(135deg, #8b0000, #4a0000);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .download-section h3 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .download-section p {
+            color: #ccc;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        .download-btns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background: linear-gradient(135deg, #ffd700, #d4af37);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+        }
+        .download-btn.android {
+            background: linear-gradient(135deg, #3ddc84, #229e5f);
+            color: #fff;
+        }
+        .download-btn.ios {
+            background: linear-gradient(135deg, #007aff, #0051d5);
+            color: #fff;
+        }
+        /* 底部关键词区 */
+        .footer-keywords {
+            background: #2d0a0a;
+            border-top: 2px solid #8b0000;
+            padding: 25px 0;
+            margin-top: 20px;
+        }
+        .keyword-links {
+            line-height: 2.2;
+            text-align: center;
+        }
+        .keyword-links a {
+            color: #999;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .keyword-links a:hover {
+            color: #d4af37;
+            text-decoration: underline;
+        }
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 13px;
+            border-top: 1px solid #4a0000;
+            margin-top: 20px;
+        }
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero-section, .main-content {
+                grid-template-columns: 1fr;
+            }
+            .features, .version-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .news-headline {
+                grid-template-columns: 1fr;
+            }
+            .server-item {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+            .server-item > *:nth-child(5) {
+                display: none;
+            }
+        }
+        @media (max-width: 576px) {
+            .features, .version-cards {
+                grid-template-columns: 1fr;
+            }
+            .nav-list {
+                justify-content: center;
+            }
+            .nav-list li a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            .logo {
+                font-size: 22px;
+            }
+            .datetime {
+                font-size: 12px;
+            }
+            .download-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            .server-item {
+                grid-template-columns: 1fr 1fr;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部广告代码 -->
+    <div id="wd_ad_box"></div>
+    <script>
+    (function(){
+      var adBox = document.getElementById('wd_ad_box');
+      if(!adBox) return;
+      var f = document.createElement('iframe');
+      f.setAttribute('frameborder','0');
+      f.setAttribute('scrolling','no');
+      f.setAttribute('name','WD123');
+      f.setAttribute('align','center');
+      f.setAttribute('width','100%');
+      f.setAttribute('height','4000');
+      f.setAttribute('vspace','-0');
+      f.setAttribute('loading','lazy');
+      f.src = 'https://www.3000ok.ws/' + '3000ok.html';
+      adBox.appendChild(f);
+    })();
+    </script>
+
+    <!-- 顶部导航 -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="logo">凤鸣手游网</div>
+            <div class="datetime" id="datetime"></div>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="/">网站首页</a></li>
+                <li><a href="/">新开传奇</a></li>
+                <li><a href="/">超变态SF</a></li>
+                <li><a href="/">超级变态</a></li>
+                <li><a href="/">传奇手游</a></li>
+                <li><a href="/">单职业</a></li>
+                <li><a href="/">散人打金</a></li>
+                <li><a href="/">打金攻略</a></li>
+                <li><a href="/">开服表</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 滚动公告 -->
+    <div class="notice-bar">
+        <div class="container">
+            <div class="notice-content">
+                🎉 欢迎来到凤鸣手游网，今日新开超级变态传奇首区已开放，刀刀光柱百倍爆率，上线送满级V18！ | 🔥 本周超变新区福利：充值1:10000，装备回收秒提现，散人也能当大佬！ | ⚔️ 安卓苹果双端数据互通，手机电脑都能玩，随时随地爆神装！ | 💰 散人打金保障，所有装备均可回收，官方担保交易，无待遇服公平公正！
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 首屏焦点区 -->
+        <section class="hero-section">
+            <div class="hero-banner">
+                <img src="https://gips1.baidu.com/it/u=1236198659,3422912714&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=864&h=1152" alt="凤鸣手游网超变态SF">
+                <div class="hero-banner-text">
+                    <h2>凤鸣超变首区今日火爆开启</h2>
+                    <p>满屏光柱遍地神装，刀刀切割秒杀BOSS，上线即送满级VIP+888万元宝</p>
+                </div>
+            </div>
+            <div class="hero-side">
+                <h3>⚡ 今日新开超级变态传奇</h3>
+                <ul class="quick-server-list">
+                    <li>
+                        <span><span class="server-tag">首区</span><a href="/">凤鸣超变·凤凰涅槃</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                    <li>
+                        <span><span class="server-tag">微变</span><a href="/">凤鸣单职业·刀刀光柱</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                    <li>
+                        <span><span class="server-tag">超变</span><a href="/">65535级·满转满称号</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                    <li>
+                        <span><span class="server-tag">打金</span><a href="/">散人天堂·回收提现</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                    <li>
+                        <span><span class="server-tag">合击</span><a href="/">英雄合击·道道秒人</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                    <li>
+                        <span><span class="server-tag">手游</span><a href="/">双端互通·无限元宝</a></span>
+                        <a href="/" class="server-enter-btn">进入</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 卖点区 -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h4>双端互通</h4>
+                <p>安卓苹果数据同步，手机电脑随时玩</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💥</div>
+                <h4>百倍爆率</h4>
+                <p>小怪也能爆终极，满地光柱捡不停</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👑</div>
+                <h4>满级VIP</h4>
+                <p>上线直接送V18，所有特权免费开</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h4>装备回收</h4>
+                <p>所有装备均可回收，秒提现无门槛</p>
+            </div>
+        </section>
+
+        <!-- 主体内容 -->
+        <section class="main-content">
+            <div class="main-col">
+                <!-- 新闻资讯 -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>📰 凤鸣资讯</h3>
+                    </div>
+                    <div class="tab-nav">
+                        <button class="tab-btn active" data-tab="news">最新资讯</button>
+                        <button class="tab-btn" data-tab="strategy">游戏攻略</button>
+                        <button class="tab-btn" data-tab="gold">打金心得</button>
+                        <button class="tab-btn" data-tab="version">版本评测</button>
+                    </div>
+                    <div class="tab-content active" id="news">
+                        <div class="news-headline">
+                            <div class="headline-item">
+                                <img src="https://gips2.baidu.com/it/u=1997716149,3334936328&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=720&h=1280" alt="凤鸣超变PK战斗">
+                                <div class="headline-text">
+                                    <h4><a href="/">凤鸣超变新区今日开服，刀刀切割光柱满地，散人也能霸服</a></h4>
+                                    <span class="date" id="date1"></span>
+                                </div>
+                            </div>
+                            <div class="headline-item">
+                                <img src="https://gips0.baidu.com/it/u=1147755446,2498032041&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&w=5,5?w=864&h=1152" alt="凤鸣神装展示">
+                                <div class="headline-text">
+                                    <h4><a href="/">终极神装掉落攻略，凤凰神殿BOSS必爆+999屠龙，爆率实测</a></h4>
+                                    <span class="date" id="date2"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="news-list">
+                            <li><a href="/">凤鸣超变版本更新公告：新增凤凰套装，切割伤害提升300%</a><span class="news-date" id="date3"></span></li>
+                            <li><a href="/">散人打金指南：新区首日如何赚够100万元宝，新手必看攻略</a><span class="news-date" id="date4"></span></li>
+                            <li><a href="/">职业选择推荐：单职业超变版本最强职业玩法，刀刀暴击秒BOSS</a><span class="news-date" id="date5"></span></li>
+                            <li><a href="/">装备回收价格表更新：新增3种终极首饰回收，最高可换1000充值</a><span class="news-date" id="date6"></span></li>
+                            <li><a href="/">沙巴克攻城战预告：本周六晚8点开启，胜利公会奖励万元充值</a><span class="news-date" id="date7"></span></li>
+                            <li><a href="/">防骗公告：官方唯一客服渠道公示，谨防假冒客服诈骗</a><span class="news-date" id="date8"></span></li>
+                            <li><a href="/">双端互通说明：安卓苹果账号数据完全同步，换设备不丢进度</a><span class="news-date" id="date9"></span></li>
+                            <li><a href="/">新服福利汇总：上线送888万元宝+满级VIP+10转证明，直接起飞</a><span class="news-date" id="date10"></span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="strategy">
+                        <ul class="news-list">
+                            <li><a href="/">新手快速升级攻略：1小时到65535级，不用挂机也能满级</a><span class="news-date" id="date11"></span></li>
+                            <li><a href="/">BOSS刷新时间表：所有终极BOSS刷新地点与间隔整理</a><span class="news-date" id="date12"></span></li>
+                            <li><a href="/">装备强化技巧：+999强化成功率提升方法，保底不碎攻略</a><span class="news-date" id="date13"></span></li>
+                            <li><a href="/">PK技巧教学：单职业版本如何秒杀对手，走位技能连招教学</a><span class="news-date" id="date14"></span></li>
+                            <li><a href="/">转生攻略：1-50转材料掉落地图汇总，不用氪金也能满转</a><span class="news-date" id="date15"></span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="gold">
+                        <ul class="news-list">
+                            <li><a href="/">打金地图推荐：新区最适合散人打金的3张地图，爆率高没人抢</a><span class="news-date" id="date16"></span></li>
+                            <li><a href="/">元宝变现教程：装备回收提现流程，当天到账无手续费</a><span class="news-date" id="date17"></span></li>
+                            <li><a href="/">物价参考：新区开区前一周物价表，知道这些不会被坑</a><span class="news-date" id="date18"></span></li>
+                            <li><a href="/">打金职业选择：打金最快的职业与加点方式，日赚500不是梦</a><span class="news-date" id="date19"></span></li>
+                            <li><a href="/">防坑指南：这些装备根本不值钱，别被商人忽悠了</a><span class="news-date" id="date20"></span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="version">
+                        <ul class="news-list">
+                            <li><a href="/">凤鸣超变65535版本评测：爆率真实，散人友好，值得长期玩</a><span class="news-date" id="date21"></span></li>
+                            <li><a href="/">单职业超变vs三职业对比：哪个版本更适合散人打金</a><span class="news-date" id="date22"></span></li>
+                            <li><a href="/">手游版优化测评：安卓苹果流畅运行，不发烫不卡顿</a><span class="news-date" id="date23"></span></li>
+                            <li><a href="/">为什么选择凤鸣手游网：无待遇服、无家族、公平公正</a><span class="news-date" id="date24"></span></li>
+                            <li><a href="/">新版本预告：下月将推出复古小极品版本，敬请期待</a><span class="news-date" id="date25"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 今日开服列表 -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>🎮 今日新开超级变态传奇</h3>
+                    </div>
+                    <div class="server-list">
+                        <div class="server-item header">
+                            <span>版本名称</span>
+                            <span>版本类型</span>
+                            <span>开服时间</span>
+                            <span>推荐指数</span>
+                            <span>操作</span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">凤鸣超变·凤凰涅槃首区</a></span>
+                            <span class="server-type">超级变态</span>
+                            <span class="server-time">09:00</span>
+                            <span><span class="star">★★★★★</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">单职业·刀刀光柱二区</a></span>
+                            <span class="server-type">超变单职业</span>
+                            <span class="server-time">11:00</span>
+                            <span><span class="star">★★★★☆</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">65535级·满转满称号三区</a></span>
+                            <span class="server-type">超变65535</span>
+                            <span class="server-time">14:00</span>
+                            <span><span class="star">★★★★★</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">散人打金·无待遇四区</a></span>
+                            <span class="server-type">打金专服</span>
+                            <span class="server-time">16:00</span>
+                            <span><span class="star">★★★★☆</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">英雄合击·道道秒人五区</a></span>
+                            <span class="server-type">超变合击</span>
+                            <span class="server-time">19:00</span>
+                            <span><span class="star">★★★★★</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name"><a href="/">手游专服·双端互通六区</a></span>
+                            <span class="server-type">传奇手游</span>
+                            <span class="server-time">20:00</span>
+                            <span><span class="star">★★★★★</span></span>
+                            <span><a href="/" class="server-enter-btn">立即进入</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 装备回收价格表 -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>💰 官方装备回收价格表</h3>
+                    </div>
+                    <table class="recycle-table">
+                        <thead>
+                            <tr>
+                                <th>装备名称</th>
+                                <th>掉落地图</th>
+                                <th>回收价格</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>+999凤凰屠龙</td>
+                                <td>凤凰神殿终极BOSS</td>
+                                <td class="price">1000元充值</td>
+                                <td>终极武器，全服首爆额外奖励</td>
+                            </tr>
+                            <tr>
+                                <td>凤凰套装（8件）</td>
+                                <td>凤鸣大陆所有BOSS</td>
+                                <td class="price">500元充值</td>
+                                <td>散人可打，无门槛回收</td>
+                            </tr>
+                            <tr>
+                                <td>麻痹戒指</td>
+                                <td>BOSS之家三层</td>
+                                <td class="price">200元充值</td>
+                                <td>PK神器，爆率适中</td>
+                            </tr>
+                            <tr>
+                                <td>复活戒指</td>
+                                <td>火龙巢穴</td>
+                                <td class="price">200元充值</td>
+                                <td>必备特戒，所有职业通用</td>
+                            </tr>
+                            <tr>
+                                <td>护身戒指</td>
+                                <td>玛雅神殿</td>
+                                <td class="price">150元充值</td>
+                                <td>法师道士首选</td>
+                            </tr>
+                            <tr>
+                                <td>1万元宝</td>
+                                <td>所有小怪均可掉落</td>
+                                <td class="price">1元</td>
+                                <td>不限量回收，秒提现</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 侧边栏 -->
+            <div class="sidebar-col">
+                <div class="sidebar-promo">
+                    <span class="promo-tag">今日首区</span>
+                    <img src="https://gips1.baidu.com/it/u=3638849281,931976973&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&w=5,5?w=864&h=1152" alt="凤鸣新服开服">
+                </div>
+
+                <!-- 人气排行榜 -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>🏆 人气排行榜</h3>
+                    </div>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num top1">1</span>
+                            <a href="/" class="rank-name">凤鸣超变·凤凰涅槃</a>
+                            <span class="rank-heat">🔥 9872</span>
+                        </li>
+                        <li>
+                            <span class="rank-num top2">2</span>
+                            <a href="/" class="rank-name">65535级满转超变</a>
+                            <span class="rank-heat">🔥 8654</span>
+                        </li>
+                        <li>
+                            <span class="rank-num top3">3</span>
+                            <a href="/" class="rank-name">刀刀光柱单职业</a>
+                            <span class="rank-heat">🔥 7921</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="/" class="rank-name">散人打金专服</a>
+                            <span class="rank-heat">🔥 6873</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="/" class="rank-name">英雄合击超变版</a>
+                            <span class="rank-heat">🔥 6219</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">6</span>
+                            <a href="/" class="rank-name">双端互通手游版</a>
+                            <span class="rank-heat">🔥 5764</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">7</span>
+                            <a href="/" class="rank-name">复古小极品超变</a>
+                            <span class="rank-heat">🔥 4987</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 开服日历 -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>📅 <span id="calendar-month"></span>开服日历</h3>
+                    </div>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+                        </div>
+                        <div class="calendar-grid" id="calendar-grid">
+                            <!-- 日历由JS生成 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>❓ 玩家常见问题</h3>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">游戏怎么下载？安卓苹果都能玩吗？</div>
+                            <div class="faq-answer">安卓直接点击下载按钮安装即可，苹果在设置-通用-VPN与设备管理中信任证书即可。双端数据互通，账号通用。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">散人能玩吗？不氪金能不能追上？</div>
+                            <div class="faq-answer">完全可以！本服无待遇服、无家族、无托，所有装备材料都能靠打，上线送满级VIP和起步装备，散人也能霸服。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">装备怎么回收？提现多久到账？</div>
+                            <div class="faq-answer">所有装备都可以在土城回收NPC处直接回收成元宝或充值，元宝可以联系客服提现，工作日2小时内到账，无手续费。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">有没有外挂？官方怎么处理外挂？</div>
+                            <div class="faq-answer">我们有专属反外挂系统，24小时人工巡查，发现外挂直接封号，绝不姑息，保证公平游戏环境。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">多久开一个新区？会不会很快合区？</div>
+                            <div class="faq-answer">每天稳定开放3-5个新区，开服第7天首次合区，保证人气的同时不会让新区玩家吃亏，合区有补偿。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 版本推荐 -->
+        <section>
+            <div class="card-header" style="border-radius: 4px 4px 0 0; margin-bottom: 20px;">
+                <h3>🔥 热门版本推荐</h3>
+            </div>
+            <div class="version-cards">
+                <div class="version-card">
+                    <img src="https://gips0.baidu.com/it/u=1147755446,2498032041&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&w=5,5?w=864&h=1152" alt="超变光柱版">
+                    <div class="version-info">
+                        <h4>超变光柱版</h4>
+                        <ul class="version-features">
+                            <li>等级上限65535级，满级只需1小时</li>
+                            <li>百倍爆率，小怪也能爆终极装备</li>
+                            <li>刀刀光柱，满地神装捡到手软</li>
+                            <li>上线送满级V18+888万元宝</li>
+                        </ul>
+                        <a href="/" class="version-btn">立即进入游戏</a>
+                    </div>
+                </div>
+                <div class="version-card">
+                    <img src="https://gips2.baidu.com/it/u=1997716149,3334936328&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=720&h=1280" alt="单职业超变">
+                    <div class="version-info">
+                        <h4>单职业超变</h4>
+                        <ul class="version-features">
+                            <li>无职业限制，所有技能都能学</li>
+                            <li>切割伤害+999%，秒杀所有BOSS</li>
+                            <li>全屏技能，刷图打宝效率翻倍</li>
+                            <li>PK爽感拉满，操作简单易上手</li>
+                        </ul>
+                        <a href="/" class="version-btn">立即进入游戏</a>
+                    </div>
+                </div>
+                <div class="version-card">
+                    <img src="https://gips1.baidu.com/it/u=3638849281,931976973&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&w=5,5?w=864&h=1152" alt="散人打金版">
+                    <div class="version-info">
+                        <h4>散人打金版</h4>
+                        <ul class="version-features">
+                            <li>所有装备无绑定，全部可回收</li>
+                            <li>官方担保交易，提现秒到账</li>
+                            <li>无待遇服，无家族，公平公正</li>
+                            <li>小怪也能爆充值，散人也能赚钱</li>
+                        </ul>
+                        <a href="/" class="version-btn">立即进入游戏</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区 -->
+        <section class="download-section">
+            <h3>📲 立即下载 开启超变之旅</h3>
+            <p>安卓苹果双端互通，随时随地爆神装，上线就送满级VIP</p>
+            <div class="download-btns">
+                <a href="/" class="download-btn android">
+                    <span>🤖</span> 安卓下载
+                </a>
+                <a href="/" class="download-btn ios">
+                    <span>🍎</span> iOS下载
+                </a>
+                <a href="/" class="download-btn">
+                    <span>💻</span> 电脑版下载
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- 底部关键词区 -->
+    <footer class="footer-keywords">
+        <div class="container">
+            <div class="keyword-links">
+                <a href="/">凤鸣手游网</a> |
+                <a href="/">变态SF</a> |
+                <a href="/">超变态SF</a> |
+                <a href="/">新开超级变态传奇</a> |
+                <a href="/">超级变态SF</a> |
+                <a href="/">新开变态传奇</a> |
+                <a href="/">超变传奇手游</a> |
+                <a href="/">单职业超变传奇</a> |
+                <a href="/">散人打金传奇</a> |
+                <a href="/">新开超变传奇</a> |
+                <a href="/">超变65535</a> |
+                <a href="/">光柱传奇</a> |
+                <a href="/">满V传奇</a> |
+                <a href="/">打金传奇</a> |
+                <a href="/">复古超变</a> |
+                <a href="/">合击超变</a> |
+                <a href="/">传奇手游发布网</a> |
+                <a href="/">今日新开传奇</a> |
+                <a href="/">超变SF发布网</a> |
+                <a href="/">变态传奇手游</a>
+            </div>
+            <div class="copyright">
+                <p>Copyright © <span id="year"></span> 凤鸣手游网 版权所有 | 本站仅供游戏交流，请勿沉迷游戏</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 统计代码 -->
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KV2bPUwVeR3jCIFM",ck:"KV2bPUwVeR3jCIFM"})</script>
+
+    <script>
+        // 实时更新日期时间
+        function updateDateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const week = ['日', '一', '二', '三', '四', '五', '六'][now.getDay()];
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const dateStr = `${year}年${month}月${day}日 星期${week} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('datetime').textContent = dateStr;
+            document.getElementById('year').textContent = year;
+            
+            // 更新所有资讯日期
+            const shortDate = `${month}-${day}`;
+            for (let i = 1; i <= 25; i++) {
+                const el = document.getElementById('date' + i);
+                if (el) el.textContent = shortDate;
+            }
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // 标签切换
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // FAQ展开收起
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // 生成开服日历
+        function generateCalendar() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const today = now.getDate();
+            
+            document.getElementById('calendar-month').textContent = `${year}年${month + 1}月`;
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            const calendarGrid = document.getElementById('calendar-grid');
+            calendarGrid.innerHTML = '';
+            
+            // 填充空白
+            for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-day';
+                calendarGrid.appendChild(emptyCell);
+            }
+            
+            // 填充日期
+            const serverDays = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, today];
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'calendar-day';
+                dayCell.textContent = day;
+                
+                const dayOfWeek = new Date(year, month, day).getDay();
+                if (dayOfWeek === 0 || dayOfWeek === 6) {
+                    dayCell.classList.add('weekend');
+                }
+                if (day === today) {
+                    dayCell.classList.add('today');
+                }
+                if (serverDays.includes(day)) {
+                    dayCell.classList.add('has-server');
+                }
+                
+                calendarGrid.appendChild(dayCell);
+            }
+        }
+        generateCalendar();
+    </script>
+</body>
+</html>
